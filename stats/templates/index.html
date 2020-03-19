@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>COVID-19 Statistics and Count</title>
+  </head>
+  <body>
+    <h2>Total Count Around the World</h2>
+
+    <p>
+       Confirmed Cases <br>
+       {{ confirmed }}
+    </p>
+    <p>
+       Active Cases <br>
+       {{ active }}
+    </p>
+    <p>
+       Total Deaths <br>
+       {{ deaths }}
+    </p>
+    <p>
+       Total Recovered <br>
+       {{ recovered }}
+    </p>
+
+    <h2>Count By Country</h2>
+    <table>
+      <tr>
+          <th>Country</th>
+          <th>Code</th>
+          <th>Confirmed</th>
+          <th>Recovered</th>
+          <th>Active</th>
+          <th>Deaths</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+      </tr>
+      {% for location in locations %}
+        <tr>
+          <td> {{location.country}} </td>
+          <td> {{location.country_code}} </td>
+          <td> {{location.confirmed}} </td>
+          <td> {{location.recovered}} </td>
+          <td> {{location.active}} </td>
+          <td> {{location.deaths}} </td>
+          <td> {{location.latitude}} </td>
+          <td> {{location.longitude}} </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+  <footer>
+     <p>Made by: Ahmed Emad</p>
+  </footer>
+</html>

@@ -13,10 +13,4 @@ class LocationModel(models.Model):
     longitude = models.FloatField()
 
     class Meta:
-        ordering = ('confirmed',)
-
-    @property
-    def active_cases(self):
-        """calculates active cases"""
-        return self.confirmed - (self.recovered + self.deaths)
-
+        ordering = ('-confirmed',)
