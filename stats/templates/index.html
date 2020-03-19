@@ -3,47 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title>COVID-19 Statistics and Count</title>
+    <link rel="stylesheet" href="static/style.css">
   </head>
   <body>
-    <h2>Total Count Around the World</h2>
-
+    <h1>Total Count Around the World</h1>
     <p>
        Confirmed Cases <br>
        {{ confirmed }}
     </p>
-    <p>
+    <p class="active">
        Active Cases <br>
        {{ active }}
     </p>
-    <p>
+    <p class="death">
        Total Deaths <br>
        {{ deaths }}
     </p>
-    <p>
+    <p class="recovered">
        Total Recovered <br>
        {{ recovered }}
     </p>
 
-    <h2>Count By Country</h2>
+    <br>
+
+    <h1>Count By Country</h1>
+    <br>
     <table>
       <tr>
           <th>Country</th>
-          <th>Code</th>
+          <th style="color: darkblue;">Code</th>
           <th>Confirmed</th>
-          <th>Recovered</th>
-          <th>Active</th>
-          <th>Deaths</th>
+          <th class="recovered">Recovered</th>
+          <th class="active">Active</th>
+          <th class="death">Deaths</th>
           <th>Latitude</th>
           <th>Longitude</th>
       </tr>
       {% for location in locations %}
         <tr>
           <td> {{location.country}} </td>
-          <td> {{location.country_code}} </td>
+          <td style="color: darkblue;"> {{location.country_code}} </td>
           <td> {{location.confirmed}} </td>
-          <td> {{location.recovered}} </td>
-          <td> {{location.active}} </td>
-          <td> {{location.deaths}} </td>
+          <td class="recovered"> {{location.recovered}} </td>
+          <td class="active"> {{location.active}} </td>
+          <td class="death"> {{location.deaths}} </td>
           <td> {{location.latitude}} </td>
           <td> {{location.longitude}} </td>
         </tr>

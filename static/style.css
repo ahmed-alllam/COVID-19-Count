@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    font-family: cursive;
+}
+
+p {
+    font-size: 25px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+}
+
+table, th, td {
+    border-spacing: 5px;
+    border: 1px solid black;
+}
+
+.death {
+    color: red;
+}
+
+.recovered {
+    color: green;
+}
+
+.active {
+    color: blue;
+}
+
+footer {
+    font-family: Times;
+    height: 100px;
+    line-height: 100px;
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+}

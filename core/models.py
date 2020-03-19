@@ -14,3 +14,9 @@ class LocationModel(models.Model):
 
     class Meta:
         ordering = ('-confirmed',)
+
+    @property
+    def active(self):
+        """calculates active cases"""
+        return self.confirmed - (self.recovered + self.deaths)
+
